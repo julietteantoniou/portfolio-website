@@ -6,7 +6,7 @@ const ProjectCard = ({content}) => {
         <div className='project-section'>
         <div className='project-section-text'>
             <a href={link} className='link' target='_blank' rel="noopener noreferrer">
-            <h3 >{title}</h3>
+            {title}
             </a>
             <p>{desc}</p>
             <div className='tech-used'>
