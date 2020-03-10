@@ -95,6 +95,9 @@ h3 {
 p {
   font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
   color: $text;
+  @media screen and (max-width: 420px){
+    font-size: calc(14px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+  }
 }
 
 a {
@@ -150,6 +153,9 @@ a {
   margin-top: 145px;
   display: flex;
   justify-content: center;
+  @media screen and (max-width:420px){
+    margin: 7.5rem 0rem;
+  }
 }
 
 // *** NAV ***
@@ -175,7 +181,7 @@ nav{
 .App{
   display: flex;
   justify-content: space-between;
-  // width: 100%;
+  width: 100%;
   // overflow: auto;
   position: relative;
   .splatter-r{
@@ -189,6 +195,11 @@ nav{
     flex-direction: column;
     align-items: flex-start;
   }
+  @media screen and (max-width: 420px){
+    // overflow-x: auto;
+    // overflow-y: hidden;
+    width: 100vw;
+  }
 }
 
 .content{
@@ -199,6 +210,9 @@ nav{
   justify-content: space-between;
   height: 100%;
   // overflow: auto;
+  @media screen and (max-width: 420px){
+    // overflow-x: auto;
+  }
 }
 
 .about{
@@ -206,6 +220,8 @@ nav{
   // overflow: auto;
   margin-top: 70px;
   display: flex;
+  display:-webkit-flexbox;
+  flex-shrink: 0;
   flex-direction: column;
   align-items: center;
   // padding: 2.4rem 3.6rem;
@@ -225,6 +241,11 @@ nav{
     // max-width: 752px;
     margin: 75px 75px 0 75px;
   // margin: 2.4rem 0;
+  @media screen and (max-width: 420px) {
+    margin: 0rem;
+    width: 85%;
+    margin-top: 3.5rem;
+  }
 }
 .about-cta{
   display: flex;
@@ -241,18 +262,13 @@ nav{
 //*** PROJECTS ***
 
 .projects{
-  width: 100;
-  // background-color: $section;
-  // padding: 2.4rem 3.6rem;
+  // width: 100%;
   justify-content: center;
   display: flex;
+  display:-webkit-flexbox;
+  flex-shrink: 0;
   flex-direction: column;
   align-items: center;
-  // flex-direction: row-reverse;
-  // :nth-child(odd){
-  //   flex-direction: row-reverse;
-  // }
-
   h2{
     color: $heading;
     text-align: center;
@@ -265,10 +281,30 @@ nav{
     justify-content: center;
     align-items: center;
     margin: 3rem 0;
-    .project-section-image img{
+    .project-section-image{
+      max-width: 30%;
+      // min-width: 350px;
+      margin: 0 2.4rem;
+a{
+  &:before,
+  &:after {
+    background-color: $section;
+  }
+}
+  @media screen and (max-width: 900px){
+   max-width: 60%;
+   margin-bottom: 3rem;
+  }
+  @media screen and (max-width: 420px){
+    width: 90%;
+    min-width: 90%;
+    margin: 0px;
+    margin-bottom: 3.5rem;
+   }
+      img{
       width: 100%;
     }
- 
+  }
     h3{
       text-align: left;
       color: $accent;
@@ -278,6 +314,21 @@ nav{
       flex-direction: column-reverse;
     }
   }
+
+  .project-section-text{
+    width: 50%;
+    margin: 0 2.4rem;
+    p{
+      margin: 1rem 0;
+    }
+    @media(max-width: 900px){
+      width: 80%;
+      text-align: center;
+      // p{
+      //   text-align: left;
+      // }
+    }
+  }
   h3{
     color: $heading;
     text-align: center;
@@ -285,50 +336,16 @@ nav{
     span{
       color: $accent;
     }
-  }
-}
-
-// .projects h3 span:hover{
-//   color: $accent-hover;
-//   transition: .7s;
-// }
-
-.project-section-image{
-  max-width: 30%;
-  min-width: 350px;
-  margin: 0 2.4rem;
-a{
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 2px;
-    left: 0; right: 0;
-    height: 1px;
-    background-color: $section;
-  }
-}
-  @media(max-width: 900px){
-   max-width: 60%;
-   margin-bottom: 3rem;
-  }
-
-}
-
-.project-section-text{
-  width: 50%;
-  margin: 0 2.4rem;
-  p{
-    margin: 1rem 0;
-  }
-  @media(max-width: 900px){
-    width: 80%;
-    text-align: center;
-    p{
-      text-align: left;
+    @media screen and (max-width: 420px) {
+      max-width: 350px;
+      margin: 0 1rem;
     }
   }
 }
+
+
+
+
 
 .tech-used{
   margin: 0 auto;
@@ -339,11 +356,13 @@ a{
   justify-content: space-between;
 
   img{
-    width: 80px;
+    width: 20%;
   }
 }
 
 .contact{
+  display:-webkit-flexbox;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -356,16 +375,9 @@ a{
   p{
     margin-bottom: 50px;
     line-height: 25px;
-    // a{
-    //   color: $accent;
-    //   text-decoration: none;
-    // }
-    // a:hover{
-    //   color: $accent-hover;
-    //   transition: .7s;
-    //   line-height: 100px;
-    //   text-decoration: underline;
-    // }
+  @media screen and (max-width: 900px){
+    text-align: center;
+  }
     a {
       color: $accent;
       position: relative;
@@ -454,12 +466,6 @@ input:focus :active, textarea:focus{
   background-color: $inputs;
 }
 
-// button:hover{
-//   background-color: $accent-hover;
-//   // transform: translate(1px, 1px);
-//   cursor: pointer;
-//   transition: .7s;
-// }
 
 .link a:hover{
   color: $accent-hover;
@@ -470,6 +476,8 @@ input:focus :active, textarea:focus{
 }
 
 .footer{
+  display:-webkit-flexbox;
+  flex-shrink: 0;
   position: relative;
   margin-top: 10rem;
   width: 60%;
