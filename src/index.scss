@@ -58,15 +58,14 @@ $section: #252934;
 $inputs: #1E242C;
 $buttons: #C7CBD1;
 
-$red: #F37272;
-$brown: #584E4A;
-$whitey: #f0f0f0;
+
 
 $duration: .5s;
 $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
 // *** GLOBAL **
+
 h1, h2, h3, h4, a {
   font-family: 'Raleway', sans-serif;
   // font-family: 'Playfair Display', serif;
@@ -94,7 +93,7 @@ h3 {
 }
 
 p {
-  font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
   color: $text;
 }
 
@@ -176,8 +175,8 @@ nav{
 .App{
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  // overflow: hidden;
+  // width: 100%;
+  // overflow: auto;
   position: relative;
   .splatter-r{
     margin-top: 170px;
@@ -197,10 +196,14 @@ nav{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  // overflow: auto;
 }
 
 .about{
   // margin: 2.4rem 0;
+  // overflow: auto;
   margin-top: 70px;
   display: flex;
   flex-direction: column;
@@ -218,7 +221,9 @@ nav{
   }
   p{
     margin-top: 75px;
-    max-width: 752px;
+    width: 70%;
+    // max-width: 752px;
+    margin: 75px 75px 0 75px;
   // margin: 2.4rem 0;
 }
 .about-cta{
@@ -259,7 +264,7 @@ nav{
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    margin: 2.4rem 0;
+    margin: 3rem 0;
     .project-section-image img{
       width: 100%;
     }
@@ -267,6 +272,10 @@ nav{
     h3{
       text-align: left;
       color: $accent;
+    }
+    @media(max-width: 900px){
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
   h3{
@@ -285,114 +294,54 @@ nav{
 // }
 
 .project-section-image{
-  width: 30%;
+  max-width: 30%;
+  min-width: 350px;
   margin: 0 2.4rem;
+a{
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0; right: 0;
+    height: 1px;
+    background-color: $section;
+  }
 }
+  @media(max-width: 900px){
+   max-width: 60%;
+   margin-bottom: 3rem;
+  }
+
+}
+
 .project-section-text{
-  width: 444px;
+  width: 50%;
   margin: 0 2.4rem;
   p{
     margin: 1rem 0;
   }
-}
-
-.carousel{
-  width: 100;
-  background-color: $section;
-  padding: 2.4rem 3.6rem;
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-}
-
-.carousel-cards{
-  width: 80%;
-  .carousel-image{
-    width: 50%;
-    img{
-      width: 100%;
+  @media(max-width: 900px){
+    width: 80%;
+    text-align: center;
+    p{
+      text-align: left;
     }
   }
-  .carousel-text{
-    width: 50%;
-  }
 }
 
-.carousel-card{
-  display: flex;
-}
-
-.active-card{
-  display: none;
-}
 .tech-used{
-  width: 80%;
+  margin: 0 auto;
+  width: 90%;
   display: flex;
   align-self: center;
   align-items: center;
   justify-content: space-between;
+
   img{
     width: 80px;
   }
 }
-
-// .contact{
-//   // padding: 2.4rem 3.6rem;
-//   max-width: 750px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   align-self: center;
-//   form{
-//     width: 90%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//   }
-//   .contact-top{
-//     display: flex;
-//     justify-content: space-between;
-//     width: 90%;
-//   }
-//   h2{
-//     text-align: center;
-//     color: $heading;
-//     width: 100%;
-//     margin-bottom: 2rem;
-//   }
-//   p span, p a{
-//     color: $accent;
-//   }
-//   p a:hover{
-//     color: $accent-hover;
-//   }
-//   input, textarea{
-//     border: 2px solid $heading;
-//     border-radius: 4px;
-//     background-color: #F6F5F4;
-//     color: $text;
-//     font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
-//     padding: .5rem;
-//   }
-//   textarea{
-//     width: 100%;
-//     height: 20rem;
-//   }
-//   input{
-//     width: 40%;
-//     height: 2rem;
-//     margin: 2.4rem 0;
-//   }
-//   button{
-//     margin: 2.4rem 0;
-//     border-radius: 4px;
-//     //border: 2px solid $heading;
-//     color: $section;
-//     background-color: $accent;
-//     font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
-//     padding: .6rem 2.4rem;
-//   }
-// }
 
 .contact{
   display: flex;
@@ -400,6 +349,7 @@ nav{
   align-items: center;
   max-width: 750px;
   margin-bottom: 200px;
+  margin: 0 3rem;
   h2{
     margin-bottom: 70px;
   }
@@ -421,7 +371,8 @@ nav{
       position: relative;
       text-decoration: none;
       padding-bottom: 4px;
-      font-size: 18px;
+      // font-size: 18px;
+      font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
     }
   }
   form{
@@ -431,14 +382,17 @@ nav{
     flex-direction: column;
     align-items: center;
     input,textarea{
+      font-family: 'Raleway', sans-serif;
       background-color: $inputs;
       border: none;
       padding: 20px;
       border-radius: 4px;
       font-size: 16px;
       color: white;
+      resize: none;
     }
     button{
+      cursor: pointer;
       background-color: $section;
       color: $accent;
       border: 1px solid $accent-hover;
@@ -455,8 +409,8 @@ nav{
     
 	  &:hover{
 		// background-color: green;
-    font-weight: 500;
-		box-shadow: 0 0 0 (1.5px) $accent-hover;
+    font-weight: 600;
+		box-shadow: 0 0 0 (2px) $accent-hover;
     }
   }
     .contact-top{
@@ -467,6 +421,14 @@ nav{
       input{
         width: 35%;
       }
+      @media(max-width: 700px){
+        flex-direction: column;
+        align-items: center;
+        input{
+          width: 90%;
+          margin-bottom: 2rem;
+        }
+       }
     }
     textarea{
       box-sizing: border-box;
@@ -481,13 +443,15 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   h3{
-    color: $accent;
+    color: $text;
   }
 }
 
-input:focus, textarea:focus{
+input:focus :active, textarea:focus{
   border: 2px solid $accent;
+  background-color: $inputs;
 }
 
 // button:hover{
@@ -506,11 +470,13 @@ input:focus, textarea:focus{
 }
 
 .footer{
-  margin: 0 auto;
-  width: 35%;
+  position: relative;
+  margin-top: 10rem;
+  width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  bottom: 0;
   margin-bottom: 1rem;
   p{
     font-size: calc(12px + (12 - 9) * ((100vw - 300px) / (1600 - 300)));
