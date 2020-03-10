@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 // import Nav from './components/nav';
 import About from './components/About';
 import Projects from './components/Projects';
-import Carousel from './components/Carousel';
 import Form from './components/Fom'
 import Contact from './components/Contact';
 import Footer from './components/Footer';
