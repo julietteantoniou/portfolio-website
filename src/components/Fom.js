@@ -66,7 +66,7 @@ if (email.message_html && email.reply_to && email.from_name){
         	required
         	value={email.message_html}
       	/>
-    	<button onClick={(e)=>handleSubmit(e)}> SEND</button>
+    	<button aria-label='Send Message' onClick={(e)=>handleSubmit(e)}> SEND</button>
   	</form>}
       </div>
 	)
