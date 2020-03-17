@@ -149,7 +149,7 @@ a {
 // }
 
 .vert-rule{
-  margin-bottom: 225px;
+  margin-bottom: 125px;
   margin-top: 145px;
   display: flex;
   justify-content: center;
@@ -161,14 +161,19 @@ a {
 // *** NAV ***
 
 nav{
+  z-index: 100000;
+  position: fixed;
   box-sizing: border-box;
+  background-color: $section;
   display: flex;
   width: 100%;
   justify-content: space-between;
   color: $accent;
-  padding: 2rem 10%;
-  padding-bottom: 0;
+  padding: 2rem 20%;
+  // margin: 0 20%;
+
   a h2{
+    font-size: calc(20px + (20 - 20) * ((100vw - 300px) / (1600 - 300)));
     color: $accent;
   }
   a h2:hover{
@@ -219,7 +224,8 @@ nav{
 .about{
   // margin: 2.4rem 0;
   // overflow: auto;
-  margin-top: 70px;
+  margin-top: 9rem;
+  // margin-top: 70px;
   display: flex;
   display:-webkit-flexbox;
   flex-shrink: 0;
@@ -261,7 +267,9 @@ nav{
 }
 
 //*** PROJECTS ***
-
+#projects, #contact{
+  padding-top: 7rem;
+}
 .projects{
   // width: 100%;
   justify-content: center;
