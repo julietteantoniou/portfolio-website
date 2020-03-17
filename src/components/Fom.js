@@ -37,7 +37,7 @@ if (email.message_html && email.reply_to && email.from_name){
   }
 
 	return (
-  	<div className="contact">
+  	<div id='contact' className="contact">
     	<h2>Get in Touch</h2>
         <p>You can find me on <a href='https://www.linkedin.com/in/juliette-antoniou-8633aa168' target='_blank' rel="noopener noreferrer">linkedin</a>, or send me an email using the form below! You can also email me directly at <a href="mailto:julietteantoniou@gmail.com?Subject=Let's%20Work%20Together!">julietteantoniou@gmail.com</a></p>
         {sent ? <div className='contact-success'><h3>Thanks for reaching out! I'll get back to you as soon as possible</h3> </div> : 

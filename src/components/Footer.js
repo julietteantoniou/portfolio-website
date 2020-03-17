@@ -7,7 +7,7 @@ const Footer = () => {
             <div className='socials'>
             <a href='https://www.linkedin.com/in/juliette-antoniou-8633aa168' target='_blank' rel="noopener noreferrer"><i class="fab fa-linkedin-in" /></a>
             <a href='https://www.github.com/julietteantoniou' target='_blank' rel="noopener noreferrer"><i class="fab fa-github"/></a>
-            <a href='https://www.twitter.com/itsjewleee' target='_blank' rel="noopener noreferrer"><i class="fab fa-twitter"/></a>
+            <a href='https://www.twitter.com/_juliettecodes' target='_blank' rel="noopener noreferrer"><i class="fab fa-twitter"/></a>
             </div>
         </footer>
     )

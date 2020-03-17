@@ -5,7 +5,7 @@ import { vertRule } from '../svg/vert-rule'
 const Contact = () => {
 
     return(
-        <div id='contact'>
+        <div >
              <div className='vert-rule'>
                 {vertRule()}
             </div>

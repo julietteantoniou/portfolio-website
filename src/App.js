@@ -3,6 +3,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Nav from './components/nav';
 
 
 function App() {
@@ -15,13 +16,13 @@ function App() {
   })
   return (
     <div className="App" ref={ref}>
-      {/* <Nav /> */}
       <div alt='white paint splatters on a dark gray background' className='splatter-l'>
       {/* {splatterLeft()} */}
       <img alt='white paint splatters on a dark gray background' src ='/images/splatter-left.svg' style={{width: '25vw'}} />
       <img alt='white paint splatters on a dark gray background' src ='/images/splatter-left2.svg' style={{width: '32vw', marginTop: '1550px'}}/>
       </div>
       <div className='content'>
+      <Nav />
        <About />
       <Projects />
       <Contact />
