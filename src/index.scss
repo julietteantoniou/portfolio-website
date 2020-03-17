@@ -170,7 +170,9 @@ nav{
   justify-content: space-between;
   color: $accent;
   padding: 2rem 20%;
-  // margin: 0 20%;
+  @media screen and (max-width: 420px) {
+    padding: 1.2rem 10%;
+  }
 
   a h2{
     font-size: calc(20px + (20 - 20) * ((100vw - 300px) / (1600 - 300)));
