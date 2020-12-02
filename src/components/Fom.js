@@ -40,6 +40,12 @@ if (email.message_html && email.reply_to && email.from_name){
   	<div id='contact' className="contact">
     	<h2>Get in Touch</h2>
         <p>You can find me on <a href='https://www.linkedin.com/in/juliette-antoniou-8633aa168' target='_blank' rel="noopener noreferrer">linkedin</a>, or send me an email at <a href="mailto:julietteantoniou@gmail.com?Subject=Let's%20Work%20Together!">julietteantoniou@gmail.com</a></p>
+	</div>
+	)
+  }
+
+export default Form;
+		
 //        {sent ? <div className='contact-success'><h3>Thanks for reaching out! I'll get back to you as soon as possible</h3> </div> : 
 //         <form>
 //     	<div className='contact-top'>
@@ -68,8 +74,4 @@ if (email.message_html && email.reply_to && email.from_name){
 //       	/>
 //     	<button aria-label='Send Message' onClick={(e)=>handleSubmit(e)}> SEND</button>
 //   	</form>}
-      </div>
-	)
-  }
 
-export default Form;
